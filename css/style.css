@@ -363,7 +363,7 @@ address a {
   margin-top: 8px;
 }
 
-.soc-list-footer {
+.list-footer-soc {
   display: flex;
   justify-content: center;
   gap: 16px;
