@@ -51,6 +51,8 @@ section {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .container-header {
@@ -94,11 +96,22 @@ address {
 
 address a {
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-info {
   background-color: #2e2f42;
   padding: 188px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .main-titel {
@@ -153,6 +166,7 @@ address a {
   font-size: 16px;
   padding: 24px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-main {
@@ -169,7 +183,7 @@ address a {
   min-width: 169px;
   height: 56px;
   border-radius: 4px;
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -182,6 +196,41 @@ address a {
   background: #2e2f42;
   color: #f4f4fd;
   padding: 100px 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  max-height: 112px;
+}
+
+.link-footer-soc {
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-footer-soc:hover,
+.link-footer-soc:focus {
+  background-color: #31d0aa;
+}
+
+.icon-footer {
+  fill: #ffffff;
+}
+
+.logo-container {
+  margin-right: 120px;
+}
+
+.footer-soc-text {
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 
 .footer-logo {
@@ -201,12 +250,12 @@ address a {
 }
 
 .nav-link:hover,
-:focus {
+.nav-link:focus {
   color: #404bbf;
 }
 
 .address-link:hover,
-:focus {
+.address-link:focus {
   color: #404bbf;
 }
 
@@ -222,6 +271,17 @@ address a {
 
 .advantages-iteam {
   width: calc((100% - 72px) / 4);
+}
+
+.icon-container {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  height: 112px;
+  background: #f4f4fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
 }
 
 .team-list {
@@ -261,8 +321,76 @@ address a {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .sub-container-portfolio {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .footer-text {
   width: 264px;
+}
+
+.icon-soc {
+  fill: #f4f4fd;
+}
+
+.link-soc {
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-soc:hover,
+.link-soc:focus {
+  background-color: #404bbf;
+}
+
+.soc-list {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.active {
+  color: #404bbf;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: -1px;
+  background-color: #404bbf;
+}
+
+.box-cover-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-text {
+  position: absolute;
+  background-color: #404bbf;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  height: 100%;
+  top: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .cover-text {
+  transform: translateY(0);
 }
